@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PythagoreController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        table {
+                border-collapse : collapse;
+                margin: 20px auto;
+                width : 60%;
+            }
+            th, td{
+                border: 1px solid #c0c0c0;
+                padding: 10px;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-weight: normal;
+            }
+            tr:nth-child(even) {
+                background-color: #f0f0f0;
+            }
+    </style>
+
+    <body>
+        <h1>LE COADOU Lucie</h1>
+        <table>
+        <tr>
+            <th>0</th>
+                {% for i in 1..10 %}
+                    <th>{{ i }}</th>
+                {% endfor %}
+            </tr>
+            {% for i in 1..10 %}
+                <tr>
+                    <th>{{ i }}</th>
+                    {% for j in 1..10 %}
+                        <td>{{ tableau[i][j - 1] }}</td>  
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+
+{% endblock %}
